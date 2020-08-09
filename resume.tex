@@ -1,0 +1,182 @@
+\documentclass[a4paper]{article}
+    \usepackage{fullpage}
+    \usepackage{amsmath}
+    \usepackage{amssymb}
+    \usepackage{textcomp}
+    \usepackage[utf8]{inputenc}
+    \usepackage[T1]{fontenc}
+    \textheight=10in
+    \pagestyle{empty}
+    \usepackage{tikz}
+    \usetikzlibrary{calc}
+    \raggedright
+
+    %\renewcommand{\encodingdefault}{cg}
+%\renewcommand{\rmdefault}{lgrcmr}
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+
+% DEFINITIONS FOR RESUME %%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\area} [2] {
+    \vspace*{-9pt}
+    \begin{verse}
+        \textbf{#1}   #2
+    \end{verse}
+}
+
+\newcommand{\lineunder} {
+    \vspace*{-8pt} \\
+    \hspace*{-18pt} \hrulefill \\
+}
+
+\newcommand{\header} [1] {
+    {\hspace*{-18pt}\vspace*{6pt} \textsc{#1}}
+    \vspace*{-6pt} \lineunder
+}
+
+\newcommand{\employer} [3] {
+    { \textbf{#1} (#2)\\ \underline{\textbf{\emph{#3}}}\\  }
+}
+
+\newcommand{\contact} [3] {
+    \vspace*{-10pt}
+    \begin{center}
+        {\Huge \scshape {#1}}\\
+        #2 \\ #3
+    \end{center}
+    \vspace*{-8pt}
+}
+
+\newenvironment{achievements}{
+    \begin{list}
+        {$\bullet$}{\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}
+    \end{list}
+}
+
+\newcommand{\schoolwithcourses} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+    \vspace*{5pt}
+}
+
+\newcommand{\school} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+}
+
+\newcommand{\linkedlist}[1]{
+  \begin{tikzpicture}[remember picture]%
+    \node (#1) [black,circle,fill,inner sep=1.5pt]{};
+  \end{tikzpicture}%
+}
+% END RESUME DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%
+
+    \begin{document}
+\vspace*{-40pt}
+
+    
+
+%==== Profile ====%
+\vspace*{-10pt}
+\begin{center}
+	{\Huge \scshape {Roy Voetman}}\\
+    \vspace*{3pt}
+    {IT student at Hanze University of Applied Sciences. Majoring in Software Engineering}\\
+    \vspace*{3pt}
+	royvoetman@outlook.com $\cdot$ 06 31296032 $\cdot$ royvoetman.nl $\cdot$ github.com/RoyVoetman\\
+\end{center}
+
+%==== Experience ====%
+\header{Experience}
+\vspace{1mm}
+
+\textbf{NoardCode} \hfill Leeuwarden, Netherlands\\
+\textit{Backend Developer} \hfill Mar 2018 - Present\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item At this company, I am responsible for the development and expansion of multiple \textbf{(Laravel)} back-end projects. For example, in this position, I designed an algorithm that extracts ePub files (ebooks) and then automatically classifies the content into different categories (e.g. Headings, Paragraphs, Images, Footnotes, etc.)
+\end{itemize}
+\textbf{Hanze University of Applied Sciences Groningen} \hfill Groningen, Netherlands\\
+\begin{itemize}
+    \item[\linkedlist{a}] {
+        \textit{Member of Information Team} \hfill Oct 2019 - Jul 2020\\
+        \vspace{-1mm}
+        \begin{itemize} \itemsep 1pt
+            \item[] At this position, I shared my experiences about the pursuit of a Bachelors degree in the field of IT at events from the Hanze University of Applied Sciences (e.g. Workshop days, Parent-teacher conferences, Open days, etc.)
+        \end{itemize}
+    } 
+    \item[\linkedlist{b}] {
+        \textit{Teaching Assistant} \hfill Sep 2019 - Jul 2020\\
+        \vspace{-1mm}
+        \begin{itemize} \itemsep 1pt
+            \item[] I served as a TA for the study program Information \& Communication Technology. At this position, I hosted TA Office Hours where first-year students were given the opportunity to re-examine subject matter covered in lectures. Subjects covered include \textbf{Software Engineering}, \textbf{Computer Networking}, \textbf{Mathematics and Statistics}.
+        \end{itemize}
+    }
+\end{itemize}
+\begin{tikzpicture}[remember picture,overlay]
+\draw[black] ($(a)!0.1!(b)$) -- ($(a)!0.9!(b)$);
+\end{tikzpicture}
+\textbf{Learn and Believe} \hfill Leeuwarden, Netherlands\\
+\textit{Freelance Web Developer} \hfill Oct 2017 - Dec 2019\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item LAB Learn and Believe was a company I started to be able to use my knowledge about Web Development \textbf{(JS, Vue.js)} to build web front-ends for a variety of different companies.
+\end{itemize}
+\textbf{OSG Piter Jelles} \hfill Leeuwarden, Netherlands\\
+\textit{PHP Developer • Internship} \hfill Sep 2016 - Jul 2017\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item At this internship, I had the assignment to design and engineer the architecture of a web-based election system for the Co-Control Board elections. This assignment included realizing a database design \textbf{(MSSQL)}, programming the back-end server logic \textbf{(PHP)}, designing the user interface \textbf{(JS)}, and setting up an implementation plan.
+\end{itemize}
+
+%==== Education ====%
+\header{Education}
+\textbf{Hanze University of Applied Sciences Groningen}\hfill Groningen, Netherlands\\
+BSc, Information \& Communication Technology, Software Engineering \hfill 2018 - 2022\\
+Current GPA: 3.9 of 4.0 (US standards), Average grade: 8.8 (European format)\\
+\vspace{2mm}
+\textbf{Friesland College}\hfill Leeuwarden, Netherlands\\
+MBO 4 Application development \hfill 2015 - 2018\\
+\vspace{2mm}
+
+\header{Certifications}
+\textbf{Mathematics for Machine Learning / Imperial College London}\hfill Coursera\\
+http://coursera.org/verify/specialization/UDHQPDDYEG9B \hfill Jul 2020\\
+\vspace{2mm}
+\textbf{Certified Laravel Developer}\hfill Laravel\\
+https://exam.laravelcert.com/is/roy-voetman/certified-since/2020-02-11 \hfill Feb 2020\\
+\vspace{2mm}
+\textbf{Web Security Specialist}\hfill Certified Secure\\
+https://www.certifiedsecure.com/profile/CS-29111671341 \hfill Apr 2018\\
+\vspace{2mm}
+\textbf{CS50: Introduction to Computer Science / HarvardX}\hfill edX\\
+https://courses.edx.org/certificates/8ba4654418fe409facdfc3bd7ee27725 \hfill Feb 2018\\
+\vspace{2mm}
+
+\header{Skills}
+\begin{tabular}{ l l }
+	Programming Languages: & PHP, JavaScript, C, Java, Python, MySQL, MSSQL, Laravel, Vue.js    \\
+	Industry Knowledge:    & Online Research, Software Documentation, Scrum                     \\
+	Interpersonal Skills:  & Public Speaking, Problem Solving, Team Leadership, Time Management \\
+    Languages:             & Dutch \emph{(Native proficiency)}, English \emph{(Professional working proficiency)}\\
+\end{tabular}
+\vspace{2mm}
+
+\newpage
+
+\header{Open-source Projects}
+{\textbf{Flysystem Gitlab storage}} {\sl PHP} \hfill https://github.com/RoyVoetman/flysystem-gitlab-storage\\
+This package contains a Flysystem adapter that is using Gitlab\textquotesingle{}s Repository (files) API v4.\\
+\vspace*{2mm}
+{\textbf{Invoice Manager}} {\sl Laravel, MySQL} \hfill https://github.com/RoyVoetman/invoices-manager\\
+A Laravel application for freelancers to manage invoices and offers.\\
+\vspace*{2mm}
+
+\header{Awards}
+\textbf{Finalist Webdesigner Skills Heroes 2018} \hfill WorldSkills Netherlands\\
+Skills Heroes is a professional competition for MBO students. During a preliminary round at school, qualification competitions at various MBO institutions, and finally during the national finals, participants compete to be best in the Netherlands. \hfill Mar 2018\\
+\vspace*{2mm}
+
+\ 
+\end{document}
