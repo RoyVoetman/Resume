@@ -70,6 +70,14 @@
     \node (#1) [black,circle,fill,inner sep=1.5pt]{};
   \end{tikzpicture}%
 }
+
+\newcommand{\roundpic}[4][]{
+  \tikz\node [circle, minimum width = #2,
+    path picture = {
+      \node [#1] at (path picture bounding box.center) {
+        \includegraphics[width=#3]{#4}};
+    }] {};}
+
 % END RESUME DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%
 
     \begin{document}
@@ -80,8 +88,12 @@
 %==== Profile ====%
 \vspace*{-10pt}
 \begin{center}
-	{\Huge \scshape {Roy Voetman}}\\
-    \vspace*{3pt}
+    \centering
+    \raisebox{-0.5\height}{\roundpic{2cm}{2cm}{avatar.jpg}}
+    \hspace*{.1in}
+    \raisebox{-0.5\height}{\Huge \scshape {Roy Voetman}}
+    
+    \vspace*{10pt}
     {IT student at Hanze University of Applied Sciences. Majoring in Software Engineering}\\
     \vspace*{3pt}
 	royvoetman@outlook.com $\cdot$ royvoetman.nl $\cdot$ github.com/RoyVoetman\\
@@ -94,7 +106,7 @@
 \textbf{Noardcode} \hfill Leeuwarden, Netherlands\\
 \begin{itemize}
     \item[\linkedlist{a}] {
-        \textit{Backend Developer} \hfill Jun 2018 - Present\\
+        \textit{Back-end Developer} \hfill Jun 2018 - Present\\
         \vspace{-1mm}
         \begin{itemize} \itemsep 1pt
             \item[] Main responsibilities: developing \& expanding multiple back-end projects, optimizing PHP scripts by inspecting Database/ORM calls, and library/package development. Application stack: \textbf{JavaScript, jQuery, PHP, PHPUnit, MariaDB, and Laravel}.
@@ -195,8 +207,8 @@ A Laravel application for freelancers to manage invoices and offers.\\
 \vspace*{2mm}
 
 \header{Awards}
-\textbf{Finalist Webdesigner Skills Heroes 2018} \hfill WorldSkills Netherlands\\
-Skills Heroes is a professional competition for MBO students. During a preliminary round at school, qualification competitions at various MBO institutions, and finally during the national finals, participants compete to be best in the Netherlands. \hfill Mar 2018\\
+\textbf{Finalist Web Designer Skills Heroes 2018} \hfill WorldSkills Netherlands\\
+Skills Heroes is a professional competition for MBO students. During a preliminary round at school, qualification competitions at various MBO institutions, and during the national finals, participants compete to be best in the Netherlands. \hfill Mar 2018\\
 \vspace*{2mm}
 
 \ 
