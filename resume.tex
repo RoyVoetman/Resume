@@ -11,6 +11,8 @@
     \usepackage{xcolor}
     \usetikzlibrary{calc}
     \raggedright
+    
+\definecolor{bg}{RGB}{29,31,33}
 
 %\renewcommand{\encodingdefault}{cg}
 %\renewcommand{\rmdefault}{lgrcmr}
@@ -18,6 +20,12 @@
 \def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
 
 % DEFINITIONS FOR RESUME %%%%%%%%%%%%%%%%%%%%%%%
+
+% dark theme
+\definecolor{bg}{RGB}{29,31,33}
+\definecolor{text}{RGB}{198,200,198}
+\pagecolor{bg}
+\color{text}
 
 \newcommand{\area} [2] {
     \vspace*{-9pt}
@@ -68,7 +76,7 @@
 
 \newcommand{\linkedlist}[1]{
   \begin{tikzpicture}[remember picture]%
-    \node (#1) [black,circle,fill,inner sep=1.5pt]{};
+    \node (#1) [text,circle,fill,inner sep=1.5pt]{};
   \end{tikzpicture}%
 }
 
@@ -81,7 +89,7 @@
 
 % END RESUME DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%
 
-    \begin{document}
+\begin{document}
 \vspace*{-40pt}
 
     
@@ -109,7 +117,7 @@
 \header{Experience}
 \vspace{1mm}
 
-\textbf{Software Engineer} \hfill \color{gray} Feb 2021 | Jul 2021 \color{black}\\
+\textbf{Software Engineer} \hfill \textcolor{gray}{Feb 2021 | Jul 2021}\\
 \textit{RDW $\cdot$ Internship}\\
 \vspace{-1mm}
 \begin{itemize} \itemsep 1pt
@@ -123,7 +131,7 @@
 \textbf{NoardCode} \hfill\\
 \begin{itemize}
     \item[\linkedlist{a}] {
-        \textit{Back-end Developer} \hfill \color{gray}Jun 2018 | Feb 2021\color{black}\\
+        \textit{Back-end Developer} \hfill \textcolor{gray}{Jun 2018 | Feb 2021}\\
         \vspace{-1mm}
         \begin{itemize} \itemsep 4pt
             \item Initiated the migration of proprietary packages to open source packages.
@@ -132,7 +140,7 @@
         \end{itemize}
     }
     \item[\linkedlist{b}] {
-        \textit{Laravel Developer $\cdot$ Internship} \hfill \color{gray}Mar 2018 | Jun 2018\color{black}\\
+        \textit{Laravel Developer $\cdot$ Internship} \hfill \textcolor{gray}{Mar 2018 | Jun 2018}\\
         \vspace{-1mm}
         \begin{itemize} \itemsep 1pt
             \item Assignment: engineered an application that extracts ePub files (ebooks) and automatically classifies the content into different categories (e.g. Headings, Paragraphs, Images).
@@ -140,11 +148,11 @@
     }
 \end{itemize}
 \begin{tikzpicture}[remember picture,overlay]
-\draw[black] ($(a)!0.1!(b)$) -- ($(a)!0.9!(b)$);
+\draw[text] ($(a)!0.1!(b)$) -- ($(a)!0.9!(b)$);
 \end{tikzpicture}
 
 \vspace{-6mm}
-\textbf{Freelance Web Developer} \hfill \color{gray} Oct 2017 | Dec 2019\color{black}\\
+\textbf{Freelance Web Developer} \hfill \textcolor{gray}{Oct 2017 | Dec 2019}\\
 \textit{Learn and Believe}\\
 \vspace{-1mm}
 \begin{itemize} \itemsep 1pt
@@ -154,7 +162,7 @@
 \end{itemize}
 
 
-\textbf{PHP Developer} \hfill \color{gray} Sep 2016 | Jul 2017\color{black}\\
+\textbf{PHP Developer} \hfill \textcolor{gray}{Sep 2016 | Jul 2017}\\
 \textit{OSG Piter Jelles $\cdot$ Internship}\\
 \vspace{-1mm}
 \begin{itemize} \itemsep 1pt
@@ -168,31 +176,31 @@
 %==== Education ====%
 \header{Education}
 \vspace{2mm}
-\textbf{Hanze University of Applied Sciences Groningen}\hfill \color{gray}2018 | 2022\color{black}\\
+\textbf{Hanze University of Applied Sciences Groningen}\hfill \textcolor{gray}{2018 | 2022}\\
 BSc., Information \& Communication Technology $\cdot$ Software Engineering\\
 \vspace{1mm}
 \emph{Current GPA: 4.0 of 4.0 (US scale), Average grade: 8.8 (EU scale)}\\
 \vspace{1mm}
-\color{gray}\emph{Among other courses: Computer Architecture, Operating Systems, Algorithms and Data Structures, Web and Mobile Services, and Data Visualization.}\color{black}
+\textcolor{gray}{\emph{Among other courses: Computer Architecture, Operating Systems, Algorithms and Data Structures, Web and Mobile Services, and Data Visualization.}}
 
 \vspace{3mm}
-\textbf{Friesland College}\hfill \color{gray}2015 | 2018\color{black}\\
+\textbf{Friesland College}\hfill \textcolor{gray}{2015 | 2018}\\
 MBO 4 Application Development\\
 
 \newpage
 
 \header{Certifications}
 \textbf{VWO Wiskunde B (Mathematics for the hard sciences)}\hfill Boswell-Bèta\\
- \hfill \color{gray}Aug 2021\color{black}\\
+ \hfill \textcolor{gray}{Aug 2021}\\
 \vspace{2mm}
 \textbf{Computer Science for Artificial Intelligence }\hfill HarvardX | edX\\
-\color{gray}https://credentials.edx.org/credentials/b251ddf835104f99ab00a67918f55d04/\color{black} \hfill \color{gray}Sep 2020\color{black}\\
+\textcolor{gray}{https://credentials.edx.org/credentials/b251ddf835104f99ab00a67918f55d04/} \hfill \textcolor{gray}{Sep 2020}\\
 \vspace{2mm}
 \textbf{Certified Laravel Developer}\hfill Laravel\\
-\color{gray}https://exam.laravelcert.com/is/roy-voetman/certified-since/2020-02-11\color{black} \hfill \color{gray}Feb 2020\color{black}\\
+\textcolor{gray}{https://exam.laravelcert.com/is/roy-voetman/certified-since/2020-02-11} \hfill \textcolor{gray}{Feb 2020}\\
 \vspace{2mm}
 \textbf{Web Security Specialist}\hfill Certified Secure\\
-\color{gray}https://www.certifiedsecure.com/profile/CS-29111671341\color{black} \hfill \color{gray}Apr 2018\color{black}\\
+\textcolor{gray}{https://www.certifiedsecure.com/profile/CS-29111671341} \hfill \textcolor{gray}{Apr 2018}\\
 \vspace{2mm}
 
 \vspace{5mm}
@@ -213,7 +221,7 @@ MBO 4 Application Development\\
 	Interpersonal Skills:    & Public Speaking, Team Leadership, Time Management
 	\vspace{1mm}\\
 	
-    Languages:               & Dutch \color{gray}\emph{(Native proficiency)}\color{black}, English \color{gray}\emph{(Professional working proficiency)}\color{black}\\
+    Languages:               & Dutch \textcolor{gray}{\emph{(Native proficiency)}}, English \textcolor{gray}{\emph{(Professional working proficiency)}}\\
     
 \end{tabular}
 \vspace{2mm}
@@ -221,7 +229,7 @@ MBO 4 Application Development\\
 \vspace{5mm}
 
 \header{Open-source Projects}
-{\textbf{Gitlab API Client for PHP}} \\ \color{gray}\emph{https://github.com/RoyVoetman/flysystem-gitlab-storage}\color{black}\\
+{\textbf{Gitlab API Client for PHP}} \\ \textcolor{gray}{\emph{https://github.com/RoyVoetman/flysystem-gitlab-storage}}\\
 A PHP package that has \textbf{over 6.000} downloads on Github.
 \vspace*{2mm}
 
@@ -230,15 +238,16 @@ A PHP package that has \textbf{over 6.000} downloads on Github.
 %==== Volunteer Experience ====%
 \header{Ancillary Positions}
 \vspace{1mm}
-\textbf{Teaching Assistant} \hfill \color{gray}Sep 2019 | Present\color{black}\\
+\textbf{Teaching Assistant} \hfill \textcolor{gray}{Sep 2019 | Present}\\
 \textit{Hanze University of Applied Sciences Groningen}\\
 \vspace{-2mm}
 \begin{itemize} \itemsep 1pt
-	\item[--] Hosting labs and grading problem sets for Hanze’s part-time IT bachelors programme. \color{gray}(2021-Present)\color{black}
-	\item[--] Hosted recitation hours for PGM1 & PGM2, Hanze’s introduction to computer science courses \color{gray}(2020-2021)\color{black}
-	\item[--]Hosted a weekly study lab session for the web programming with PHP course.\\\color{gray}(2019-2020)\color{black}
+	\item[--] Hosting labs and grading problem sets for Hanze’s part-time IT bachelors programme.\\ \textcolor{gray}{(2021-Present)}
+	\item[--] Hosted recitation hours for PGM1 & PGM2, Hanze’s introduction to computer science courses.\\\textcolor{gray}{(2020-2021)}
+	\item[--]Hosted a weekly study lab session for the web programming with PHP course.\\
+		\textcolor{gray}{(2019-2020)}
 \end{itemize}
-\textbf{Study Support Instructor} \hfill \color{gray}Nov 2019 | Present\color{black}\\
+\textbf{Study Support Instructor} \hfill \textcolor{gray}{Nov 2019 | Present}\\
 \textit{Study Association RealTime}\\
 \vspace{-2mm}
 \begin{itemize} \itemsep 1pt
